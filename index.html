@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Project information for SurvivalStream Launcher, an independent Windows launcher for a private modded Minecraft: Java Edition server.">
+  <title>SurvivalStream Launcher | Project information</title>
+  <link rel="icon" type="image/svg+xml" href="mark.svg">
+  <style>
+    :root {
+      color-scheme: dark;
+      font: 16px/1.6 system-ui, sans-serif;
+      color: #edf0f0;
+      background: #171a1d;
+      --muted: #bec8cb;
+      --accent: #83d4c0;
+      --line: #3b4449;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    .frame { width: min(100% - 3rem, 58rem); margin-inline: auto; }
+    .brand { display: flex; align-items: center; gap: .8rem; padding-block: 1.25rem; font-weight: 700; }
+    .brand img { display: block; }
+    header, footer { background: #20252a; }
+    header { border-bottom: 1px solid var(--line); }
+    main { padding-block: 2.8rem 3.2rem; }
+    .eyebrow { color: var(--accent); font-weight: 700; margin: 0 0 .65rem; font-size: .9rem; }
+    h1, h2, p, dl { margin: 0; }
+    h1 { font-size: 2.7rem; line-height: 1.12; overflow-wrap: anywhere; }
+    h2 { font-size: 1.3rem; line-height: 1.3; }
+    p { max-width: 66ch; }
+    .lede { font-size: 1.1rem; color: var(--muted); margin-top: .9rem; }
+    .facts { display: grid; grid-template-columns: 1fr 1.35fr 1fr; gap: .75rem 1.25rem; margin-top: 1.65rem; padding-block: .95rem; border-block: 1px solid var(--line); }
+    dt { color: var(--muted); font-size: .88rem; }
+    dd { margin: 0; font-weight: 650; }
+    .status { color: #f1d29a; }
+    .section { margin-top: 2.15rem; }
+    .section h2 { margin-bottom: .55rem; }
+    .section p { color: var(--muted); }
+    .section p + p { margin-top: .6rem; }
+    footer { border-top: 1px solid var(--line); padding-block: 1.25rem; font-size: .88rem; color: var(--muted); }
+    @media (max-width: 38rem) {
+      .frame { width: calc(100% - 2rem); }
+      main { padding-block: 1.9rem 2.4rem; }
+      h1 { font-size: 2.05rem; }
+      .facts { grid-template-columns: 1fr; gap: .65rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="frame brand"><img src="mark.svg" width="34" height="34" alt=""> SurvivalStream</div>
+  </header>
+  <main class="frame">
+    <p class="eyebrow">Project information</p>
+    <h1>SurvivalStream Launcher</h1>
+    <p class="lede">An independent Windows launcher for a private, modded Minecraft: Java Edition server.</p>
+    <dl class="facts">
+      <div><dt>Platform</dt><dd>Windows</dd></div>
+      <div><dt>Game</dt><dd>Minecraft: Java Edition</dd></div>
+      <div><dt>Release status</dt><dd class="status">Local testing</dd></div>
+    </dl>
+    <section class="section">
+      <h2>What the launcher does</h2>
+      <p>SurvivalStream Launcher checks the files of the locally installed SurvivalStream modpack and starts Minecraft with that profile. The preview is being tested with Minecraft 1.21.1 and NeoForge. It is not available for public download.</p>
+    </section>
+    <section class="section">
+      <h2>Why we request Minecraft API access</h2>
+      <p>Players sign in with their own personal Microsoft accounts in their default browser. The launcher uses Microsoft and Xbox authorization to sign in to Minecraft Services, verify access to Java Edition, and retrieve the player's Java profile before launch. It does not bypass the ownership check.</p>
+    </section>
+    <section class="section">
+      <h2>Account data</h2>
+      <p>The launcher does not ask for or collect Microsoft passwords. The Microsoft sign-in session is stored locally using Windows-backed encryption. The Minecraft access token is kept only in the launcher's memory and passed to the local game process to sign in. Signing out removes the launcher's local saved session.</p>
+      <p>This website is informational only. It does not offer sign-in, request account details, or distribute game files.</p>
+    </section>
+  </main>
+  <footer>
+    <div class="frame">An independent project. Not affiliated with or endorsed by Mojang Studios or Microsoft.</div>
+  </footer>
+</body>
+</html>
